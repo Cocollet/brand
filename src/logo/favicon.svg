@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="11" fill="{{tile}}"/><path fill="{{mark}}" transform="translate(4.8 4.8) scale(0.8)" d="M16 6 H32 A10 10 0 0 1 42 16 V18.5 H21 V29.5 H42 V32 A10 10 0 0 1 32 42 H16 A10 10 0 0 1 6 32 V16 A10 10 0 0 1 16 6 Z"/></svg>

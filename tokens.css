@@ -1,0 +1,58 @@
+/* Charte Cocollet — FICHIER GÉNÉRÉ par build.mjs depuis tokens.json : ne pas l'éditer.
+   Source : https://github.com/Cocollet/brand — publié sur https://cocollet.github.io/brand/tokens.css
+   Toutes les variables sont préfixées --cc- pour ne heurter aucune autre feuille (Authentik, PatternFly). */
+:root {
+  --cc-bg: #121212; /* Fond de toutes les pages (login, statut, applis). Gris très foncé plutôt que noir pur (valeur Material Design), moins dur pour l'œil. */
+  --cc-surface: #1a1a1a; /* Cartes, tuiles de service, colonne du formulaire de login. */
+  --cc-surface-raised: #222222; /* Élément posé sur une surface : champ, puce, grande forme décorative du login. */
+  --cc-line: #2e2e2e; /* Bordures de cartes et séparateurs (1 px). */
+  --cc-line-strong: #3d3d3d; /* Bordure d'un champ au repos. */
+  --cc-text: #e8e3da; /* Texte principal sur bg et surface (environ 15:1). */
+  --cc-text-soft: #cfc9bf; /* Labels de champs, paragraphes secondaires sur bg et surface. */
+  --cc-text-muted: #8c857b; /* Méta, horodatages, mentions ; 4,8:1 sur surface, à garder pour le petit texte informatif. */
+  --cc-amber: #ecb166; /* Accent de marque, ambre doux : logo, mascottes, bouton principal, liens, focus. Désaturé exprès (78 %) pour ne pas vibrer sur le fond sombre. Jamais une couleur d'état. */
+  --cc-amber-soft: #fac687; /* Survol des liens et des boutons amber. */
+  --cc-on-amber: #0a0a0a; /* Texte et yeux posés sur amber (10,4:1) : le blanc ne passe pas. */
+  --cc-amber-deep: #9f6700; /* Logo, boutons et accents sur fond clair (4,8:1 sur blanc). */
+  --cc-ok: #4ade80; /* État opérationnel : texte du badge OK sur ok-bg. */
+  --cc-ok-bg: #10291a; /* Fond du badge OK. */
+  --cc-warn: #e9ec94; /* Avertissement : état dégradé ou lent, élément à vérifier ; barres d'historique dégradées. Jaune citron pâle, nettement plus jaune que amber pour ne pas s'y confondre (12,7:1 sur warn-bg). */
+  --cc-warn-bg: #25231a; /* Fond du badge dégradé. */
+  --cc-down: #f87171; /* Panne : texte du badge sur down-badge-bg, bordure de la tuile en panne, barres d'historique en panne. */
+  --cc-down-bg: #1f0e0e; /* Fond de la tuile d'un service en panne. */
+  --cc-down-badge-bg: #361516; /* Fond du badge En panne, texte down dessus (6:1) ; un cran au-dessus de down-bg pour rester visible sur la tuile en panne. */
+  --cc-bar-idle: #343434; /* Barre d'historique d'un jour sans incident : neutre, pour que seuls les incidents ressortent. */
+  --cc-focus-ring: 0 0 0 3px rgba(236,177,102,0.25); /* Halo du champ ou bouton qui a le focus, avec une bordure amber. */
+  --cc-space-1: 4px; /* Écart entre une puce et son texte. */
+  --cc-space-2: 8px; /* Label → champ. */
+  --cc-space-3: 12px; /* Logo → nom ; écart entre badges. */
+  --cc-space-4: 16px; /* Entre champs d'un formulaire ; entre tuiles. */
+  --cc-space-5: 24px; /* Padding des tuiles et cartes. */
+  --cc-space-6: 32px; /* Entre sections d'une page. */
+  --cc-space-7: 48px; /* Marges de page. */
+  --cc-space-8: 56px; /* Padding de la colonne du login. */
+  --cc-radius-s: 2px; /* Barres d'historique. */
+  --cc-radius-m: 12px; /* Boutons et champs. */
+  --cc-radius-l: 20px; /* Cartes et tuiles de service. */
+  --cc-radius-pill: 999px; /* Badges d'état. */
+  --cc-font-display: Lora, Georgia, serif;
+  --cc-font-sans: Inter, system-ui, sans-serif;
+  --cc-type-display-xl: 600 56px/1.02 var(--cc-font-display); /* Titre d'une page de statut ou d'erreur. */
+  --cc-type-display-l: 600 44px/1.05 var(--cc-font-display); /* Titre du login. */
+  --cc-type-title: 600 30px/1.15 var(--cc-font-display); /* Titre d'écran dans une appli. */
+  --cc-type-heading: 600 20px/1.2 var(--cc-font-display); /* Nom d'un service sur sa tuile, titre de section. */
+  --cc-type-wordmark: 600 26px/1 var(--cc-font-display); /* Le nom à côté du logo, toujours en minuscules. */
+  --cc-type-body-l: 400 18px/1.5 var(--cc-font-sans); /* Phrase d'explication sous un titre de statut. */
+  --cc-type-body: 400 15px/1.5 var(--cc-font-sans); /* Texte courant, champs. */
+  --cc-type-label: 500 13px/1.4 var(--cc-font-sans); /* Labels de champs, badges. */
+  --cc-type-meta: 400 12px/1.4 var(--cc-font-sans); /* Horodatages, mentions de pied de page. */
+  --cc-type-display-xl-tracking: -0.02em;
+  --cc-type-display-l-tracking: -0.02em;
+  --cc-type-title-tracking: -0.02em;
+  --cc-type-heading-tracking: -0.01em;
+  --cc-type-wordmark-tracking: -0.02em;
+  --cc-type-body-l-tracking: 0;
+  --cc-type-body-tracking: 0;
+  --cc-type-label-tracking: 0;
+  --cc-type-meta-tracking: 0;
+}

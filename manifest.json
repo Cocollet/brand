@@ -1,0 +1,19 @@
+{
+  "files": {
+    "logo/mark.svg": "9ad212a278ae83772d0563f35fbd954e54936b608173ad6e3bc3d09446456de0",
+    "logo/mark-on-light.svg": "14b14a69b1e1d9acf6e2d0ab6363192d2cc2d7fe593e60cdace9ebc38292390b",
+    "logo/mark-cream.svg": "206d836bffc4057e0de3454891d5755f2bbe646d3817b4b83b217af18c5e9c5e",
+    "logo/favicon.svg": "85933ace027875fe26fea256f5081875aa60e4d15130c22127465fed3f3809ee",
+    "logo/lockup-dark.svg": "aef0f32bd75c0500c9eb42c1b2931cd52a749a4634faec13315812fe4b9d37ff",
+    "logo/lockup-light.svg": "d40ef5b65fac96f4407a10f2b7c780e467089c09304010bddb23cb431be383a2",
+    "mascots/denied.svg": "f3f0094e6ba12237eed6ea4d5522c5cdbe45dbeab250db7d75a6c3df5df65ed8",
+    "mascots/done.svg": "1e3f75e97cc094c655d58f78b42bc1c3607c8e667a78657a0d82ab2243c7e5a0",
+    "mascots/down.svg": "67d3f75553cb6dae48246a33e09f882e7a3926101a199f5a937319c752cfba86",
+    "mascots/hello.svg": "070422075e85234de8399614e0c31142c5895350457ef3c72b59a8e4ca72a93b",
+    "mascots/lost.svg": "70f93b6768db51c639c5b3dc4e8addabb4d60224091717c15544bfceb388ca64",
+    "mascots/ok.svg": "33fd470809c140bd30abc8277af069bd710d74cc9dabce859e51998e56716f41",
+    "mascots/slow.svg": "91734b1c382e19a9cb8d50b5e70d78bfb55a10dafa1800290c3f06c468160c10",
+    "mascots/working.svg": "6a9db41ea22e223ba36a19d1aa72552c58a7b987434022a2ed277f81fa44ec2e",
+    "tokens.css": "f1e7d903aea9bea304dc16903dc3c474907c192ca133f69aa9a13fd2dbee7a96"
+  }
+}

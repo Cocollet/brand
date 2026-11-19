@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Charte Cocollet</title>
+<link rel="icon" href="logo/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="tokens.css">
+<style>
+body { margin: 0; background: var(--cc-bg); color: var(--cc-text); font: var(--cc-type-body); }
+main { max-width: 1040px; margin: 0 auto; padding: 48px 24px; display: flex; flex-direction: column; gap: 40px; }
+h1 { margin: 0; font: var(--cc-type-display-l); letter-spacing: var(--cc-type-display-l-tracking); }
+h2 { margin: 0 0 16px; font: var(--cc-type-heading); }
+p, code { color: var(--cc-text-soft); } a { color: var(--cc-amber); } a:hover { color: var(--cc-amber-soft); }
+ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+li { display: grid; grid-template-columns: 28px 140px 90px 1fr; gap: 12px; align-items: center; font-size: 13px; }
+li i { width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--cc-line); }
+li span { color: var(--cc-text-muted); }
+.grid { display: flex; flex-wrap: wrap; gap: 16px; }
+figure { margin: 0; padding: 16px; background: var(--cc-surface); border: 1px solid var(--cc-line); border-radius: var(--cc-radius-l); display: flex; flex-direction: column; gap: 10px; align-items: center; }
+figure img { height: 72px; max-width: 240px; } figure.light { background: #f3f0eb; } figure.light a { color: var(--cc-amber-deep); }
+figcaption { font: var(--cc-type-meta); }
+</style></head>
+<body><main>
+<h1>Charte Cocollet</h1>
+<p>Fichiers générés depuis <a href="https://github.com/Cocollet/brand">Cocollet/brand</a>. À lier tels quels :
+<code>https://cocollet.github.io/brand/tokens.css</code>, <code>…/mascots/&lt;nom&gt;.svg</code>, <code>…/logo/&lt;nom&gt;.svg</code>.</p>
+<section><h2>Mascottes</h2><div class="grid"><figure><img src="mascots/denied.svg" alt=""><figcaption><a href="mascots/denied.svg">mascots/denied.svg</a></figcaption></figure>
+<figure><img src="mascots/done.svg" alt=""><figcaption><a href="mascots/done.svg">mascots/done.svg</a></figcaption></figure>
+<figure><img src="mascots/down.svg" alt=""><figcaption><a href="mascots/down.svg">mascots/down.svg</a></figcaption></figure>
+<figure><img src="mascots/hello.svg" alt=""><figcaption><a href="mascots/hello.svg">mascots/hello.svg</a></figcaption></figure>
+<figure><img src="mascots/lost.svg" alt=""><figcaption><a href="mascots/lost.svg">mascots/lost.svg</a></figcaption></figure>
+<figure><img src="mascots/ok.svg" alt=""><figcaption><a href="mascots/ok.svg">mascots/ok.svg</a></figcaption></figure>
+<figure><img src="mascots/slow.svg" alt=""><figcaption><a href="mascots/slow.svg">mascots/slow.svg</a></figcaption></figure>
+<figure><img src="mascots/working.svg" alt=""><figcaption><a href="mascots/working.svg">mascots/working.svg</a></figcaption></figure></div></section>
+<section><h2>Logos</h2><div class="grid"><figure><img src="logo/mark.svg" alt=""><figcaption><a href="logo/mark.svg">logo/mark.svg</a></figcaption></figure>
+<figure><img src="logo/mark-cream.svg" alt=""><figcaption><a href="logo/mark-cream.svg">logo/mark-cream.svg</a></figcaption></figure>
+<figure><img src="logo/favicon.svg" alt=""><figcaption><a href="logo/favicon.svg">logo/favicon.svg</a></figcaption></figure>
+<figure><img src="logo/lockup-dark.svg" alt=""><figcaption><a href="logo/lockup-dark.svg">logo/lockup-dark.svg</a></figcaption></figure>
+<figure class="light"><img src="logo/mark-on-light.svg" alt=""><figcaption><a href="logo/mark-on-light.svg">logo/mark-on-light.svg</a></figcaption></figure>
+<figure class="light"><img src="logo/lockup-light.svg" alt=""><figcaption><a href="logo/lockup-light.svg">logo/lockup-light.svg</a></figcaption></figure></div></section>
+<section><h2>Couleurs</h2><ul><li><i style="background:var(--cc-bg)"></i><b>bg</b><code>#121212</code><span>Fond de toutes les pages (login, statut, applis). Gris très foncé plutôt que noir pur (valeur Material Design), moins dur pour l'œil.</span></li>
+<li><i style="background:var(--cc-surface)"></i><b>surface</b><code>#1a1a1a</code><span>Cartes, tuiles de service, colonne du formulaire de login.</span></li>
+<li><i style="background:var(--cc-surface-raised)"></i><b>surface-raised</b><code>#222222</code><span>Élément posé sur une surface : champ, puce, grande forme décorative du login.</span></li>
+<li><i style="background:var(--cc-line)"></i><b>line</b><code>#2e2e2e</code><span>Bordures de cartes et séparateurs (1 px).</span></li>
+<li><i style="background:var(--cc-line-strong)"></i><b>line-strong</b><code>#3d3d3d</code><span>Bordure d'un champ au repos.</span></li>
+<li><i style="background:var(--cc-text)"></i><b>text</b><code>#e8e3da</code><span>Texte principal sur bg et surface (environ 15:1).</span></li>
+<li><i style="background:var(--cc-text-soft)"></i><b>text-soft</b><code>#cfc9bf</code><span>Labels de champs, paragraphes secondaires sur bg et surface.</span></li>
+<li><i style="background:var(--cc-text-muted)"></i><b>text-muted</b><code>#8c857b</code><span>Méta, horodatages, mentions ; 4,8:1 sur surface, à garder pour le petit texte informatif.</span></li>
+<li><i style="background:var(--cc-amber)"></i><b>amber</b><code>#ecb166</code><span>Accent de marque, ambre doux : logo, mascottes, bouton principal, liens, focus. Désaturé exprès (78 %) pour ne pas vibrer sur le fond sombre. Jamais une couleur d'état.</span></li>
+<li><i style="background:var(--cc-amber-soft)"></i><b>amber-soft</b><code>#fac687</code><span>Survol des liens et des boutons amber.</span></li>
+<li><i style="background:var(--cc-on-amber)"></i><b>on-amber</b><code>#0a0a0a</code><span>Texte et yeux posés sur amber (10,4:1) : le blanc ne passe pas.</span></li>
+<li><i style="background:var(--cc-amber-deep)"></i><b>amber-deep</b><code>#9f6700</code><span>Logo, boutons et accents sur fond clair (4,8:1 sur blanc).</span></li>
+<li><i style="background:var(--cc-ok)"></i><b>ok</b><code>#4ade80</code><span>État opérationnel : texte du badge OK sur ok-bg.</span></li>
+<li><i style="background:var(--cc-ok-bg)"></i><b>ok-bg</b><code>#10291a</code><span>Fond du badge OK.</span></li>
+<li><i style="background:var(--cc-warn)"></i><b>warn</b><code>#e9ec94</code><span>Avertissement : état dégradé ou lent, élément à vérifier ; barres d'historique dégradées. Jaune citron pâle, nettement plus jaune que amber pour ne pas s'y confondre (12,7:1 sur warn-bg).</span></li>
+<li><i style="background:var(--cc-warn-bg)"></i><b>warn-bg</b><code>#25231a</code><span>Fond du badge dégradé.</span></li>
+<li><i style="background:var(--cc-down)"></i><b>down</b><code>#f87171</code><span>Panne : texte du badge sur down-badge-bg, bordure de la tuile en panne, barres d'historique en panne.</span></li>
+<li><i style="background:var(--cc-down-bg)"></i><b>down-bg</b><code>#1f0e0e</code><span>Fond de la tuile d'un service en panne.</span></li>
+<li><i style="background:var(--cc-down-badge-bg)"></i><b>down-badge-bg</b><code>#361516</code><span>Fond du badge En panne, texte down dessus (6:1) ; un cran au-dessus de down-bg pour rester visible sur la tuile en panne.</span></li>
+<li><i style="background:var(--cc-bar-idle)"></i><b>bar-idle</b><code>#343434</code><span>Barre d'historique d'un jour sans incident : neutre, pour que seuls les incidents ressortent.</span></li></ul></section>
+</main></body></html>
