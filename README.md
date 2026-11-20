@@ -44,5 +44,23 @@ Les polices (Lora 600, Inter) ne sont pas ici : Google Fonts, ou servies par l'a
 Dans les copies, le workflow `sync-brand` (nuit, à la demande, ou prévenu par ce dépôt) télécharge `manifest.json`
 et les fichiers qu'il liste, et commit s'il y a une différence.
 
+## Brancher une nouvelle appli
+
+1. **Lien ou copie ?** Lier `https://cocollet.github.io/brand/tokens.css` (et les SVG) si l'appli peut charger une
+   ressource externe. Garder une **copie** si sa CSP l'interdit ou si elle doit rester entière quand GitHub tombe
+   (page d'état) : reprendre `.github/workflows/sync-brand.yml` de `Cocollet/status` en changeant seulement `DEST`,
+   et faire une première copie à la main (`manifest.json` + les fichiers qu'il liste).
+2. **Couleurs, polices, rayons** : uniquement par les variables `--cc-*`. Une appli peut les renommer pour sa
+   lisibilité (`--amber: var(--cc-amber)`), jamais recopier une valeur. Polices : Lora 600 et Inter, par Google Fonts
+   ou servies par l'appli.
+3. **Logo et mascottes** : les SVG de `logo/` et `mascots/`, par `<img>` ou par URL CSS. En SVG inline seulement pour
+   animer (classes `cc-face` et `cc-eyes`) ; une mascotte par écran, à côté d'un texte qui dit la même chose.
+4. **Une copie ?** Ajouter le dépôt à la boucle « Prévenir les applis » de `.github/workflows/build.yml` et au jeton
+   `BRAND_DISPATCH_TOKEN` (*Contents: read and write*).
+5. Ajouter l'appli au tableau « Qui consomme quoi » ci-dessus.
+
+Le guide de marque (règles d'usage, composants, essais) est le système de design « Cocollet » sur claude.ai ; une
+valeur qui y est validée se reporte ici.
+
 ⚠️ Le login charge `tokens.css` : quiconque peut pousser ici peut changer l'apparence du login. Dépôt à protéger
 comme le compte GitHub (2FA).
