@@ -10,7 +10,7 @@ Aperçu : https://cocollet.github.io/brand/
 | Pour changer… | Éditer | |
 | --- | --- | --- |
 | une couleur, une taille, un rayon | `tokens.json` | même forme que le système de design « Cocollet » (claude.ai) ; une couleur a une valeur par thème |
-| le dessin d'une mascotte | `src/mascots/<nom>.svg` | `{{amber}}`, `{{on-amber}}` = jetons de `tokens.json` |
+| le dessin d'une mascotte | `src/mascots/<nom>.svg` | `{{mascot}}`, `{{mascot-eye}}` = jetons de `tokens.json` |
 | le logo | `src/logo/*.svg` | déclinaisons de couleur : `LOGOS` dans `build.mjs` |
 | ajouter une mascotte | un nouveau `src/mascots/<nom>.svg` | les copies la récupèrent d'elles-mêmes (`manifest.json`) |
 | l'habillage d'une appli tierce (Immich) | `src/apps/<appli>.css` | `{{light:bg}}`, `{{rgb:dark:amber}}` = un jeton dans un thème, en hexadécimal ou en triplet RVB |
@@ -25,8 +25,10 @@ Deux thèmes : **Nuit** (`dark`, celui de toutes les applis maison aujourd'hui) 
 plus claires que le fond, champs blancs, ambre plus foncé). Dans `tokens.css`, `:root` porte Nuit ; une appli passe en
 Jour en posant `data-theme="light"` sur un élément. En Jour, le survol fonce (`amber-soft`) au lieu d'éclaircir, et le
 texte posé sur l'ambre est blanc. Logos et mascottes sont générés avec les couleurs de Nuit ; sur fond clair, le logo
-existe en `*-light` et `mark-on-light` (`amber-deep`, la valeur d'`amber` en Jour). Une mascotte garde ses yeux
-presque noirs dans les deux thèmes.
+existe en `*-light` et `mark-on-light` (`amber-deep`, la valeur d'`amber` en Jour). Une mascotte est la même dans
+les deux thèmes : `mascot` et `mascot-eye` ont une seule valeur, pour les fichiers de `mascots/` comme pour une
+mascotte dessinée dans une page. Une appli n'affiche Jour que si la personne l'a choisi : sans choix, c'est Nuit,
+quel que soit le réglage de l'appareil.
 
 Règles de génération : un `{{…}}` inconnu, une couleur invalide ou un jeton en double arrêtent le build ;
 `tokens.css` ne contient jamais `>` ni `&` (Authentik les réécrit sur ses pages serveur).
@@ -36,7 +38,7 @@ Règles de génération : un `{{…}}` inconnu, une couleur invalide ou un jeton
 | URL (`https://cocollet.github.io/brand/…`) | Contenu |
 | --- | --- |
 | `tokens.css` | variables `--cc-*` : couleurs (`--cc-amber`…, thème Nuit ; Jour sous `[data-theme="light"]`), espacements, rayons, polices, `--cc-type-<style>` (raccourci `font`) |
-| `mascots/<nom>.svg` | `ok`, `hello`, `done`, `working`, `slow`, `down`, `denied`, `lost` — couleurs en attributs ; classes `cc-face` et `cc-eyes` pour animer les yeux (« en cours ») |
+| `mascots/<nom>.svg` | `ok`, `hello`, `done`, `working`, `slow`, `down`, `denied`, `lost` : couleurs en attributs ; classes `cc-face` et `cc-eyes` pour animer les yeux (« en cours ») |
 | `logo/<nom>.svg` | `mark`, `mark-on-light`, `mark-cream`, `favicon`, `lockup-dark`, `lockup-light` |
 | `apps/immich.css` | habillage complet d'Immich (web), deux thèmes ; hors de `manifest.json`, les copies n'en ont pas besoin |
 | `manifest.json` | liste des fichiers publiés et leur empreinte |
