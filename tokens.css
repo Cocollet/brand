@@ -12,8 +12,8 @@
   --cc-text-muted: #8c857b; /* Méta, horodatages, mentions ; 4,8:1 sur surface, à garder pour le petit texte informatif. */
   --cc-amber: #ecb166; /* Accent de marque, ambre doux : logo, mascottes, bouton principal, liens, focus. Désaturé exprès (78 %) pour ne pas vibrer sur le fond sombre. Jamais une couleur d'état. */
   --cc-amber-soft: #fac687; /* Survol des liens et des boutons amber. */
-  --cc-on-amber: #0a0a0a; /* Texte et yeux posés sur amber (10,4:1) : le blanc ne passe pas. */
-  --cc-amber-deep: #9f6700; /* Logo, boutons et accents sur fond clair (4,8:1 sur blanc). */
+  --cc-on-amber: #0a0a0a; /* Texte posé sur amber : presque noir en Nuit (10,4:1, le blanc ne passe pas), blanc en Jour (5,6:1). Les yeux des mascottes restent presque noirs dans les deux thèmes. */
+  --cc-amber-deep: #905d00; /* Logo sur fond clair, hors thème : même valeur que amber en Jour (4,9:1 sur le fond crème, 5,6:1 sur blanc). */
   --cc-ok: #4ade80; /* État opérationnel : texte du badge OK sur ok-bg. */
   --cc-ok-bg: #10291a; /* Fond du badge OK. */
   --cc-warn: #e9ec94; /* Avertissement : état dégradé ou lent, élément à vérifier ; barres d'historique dégradées. Jaune citron pâle, nettement plus jaune que amber pour ne pas s'y confondre (12,7:1 sur warn-bg). */
@@ -55,4 +55,27 @@
   --cc-type-body-tracking: 0;
   --cc-type-label-tracking: 0;
   --cc-type-meta-tracking: 0;
+}
+[data-theme="light"] {
+  --cc-bg: #f3f0eb;
+  --cc-surface: #faf8f4;
+  --cc-surface-raised: #ffffff;
+  --cc-line: #e3ded5;
+  --cc-line-strong: #cbc4b8;
+  --cc-text: #1f1c18;
+  --cc-text-soft: #4d473f;
+  --cc-text-muted: #6e675c;
+  --cc-amber: #905d00;
+  --cc-amber-soft: #7a4e00;
+  --cc-on-amber: #ffffff;
+  --cc-amber-deep: #905d00;
+  --cc-ok: #17743a;
+  --cc-ok-bg: #e2f2e4;
+  --cc-warn: #6a6200;
+  --cc-warn-bg: #f1f0c4;
+  --cc-down: #b3261e;
+  --cc-down-bg: #fbe6e3;
+  --cc-down-badge-bg: #f7d4cf;
+  --cc-bar-idle: #ddd8ce;
+  --cc-focus-ring: 0 0 0 3px rgba(144,93,0,0.25);
 }

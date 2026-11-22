@@ -11,7 +11,7 @@ h1 { margin: 0; font: var(--cc-type-display-l); letter-spacing: var(--cc-type-di
 h2 { margin: 0 0 16px; font: var(--cc-type-heading); }
 p, code { color: var(--cc-text-soft); } a { color: var(--cc-amber); } a:hover { color: var(--cc-amber-soft); }
 ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-li { display: grid; grid-template-columns: 28px 140px 90px 1fr; gap: 12px; align-items: center; font-size: 13px; }
+li { display: grid; grid-template-columns: repeat(2, 28px) 140px 180px 1fr; gap: 12px; align-items: center; font-size: 13px; }
 li i { width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--cc-line); }
 li span { color: var(--cc-text-muted); }
 .grid { display: flex; flex-wrap: wrap; gap: 16px; }
@@ -37,24 +37,25 @@ figcaption { font: var(--cc-type-meta); }
 <figure><img src="logo/lockup-dark.svg" alt=""><figcaption><a href="logo/lockup-dark.svg">logo/lockup-dark.svg</a></figcaption></figure>
 <figure class="light"><img src="logo/mark-on-light.svg" alt=""><figcaption><a href="logo/mark-on-light.svg">logo/mark-on-light.svg</a></figcaption></figure>
 <figure class="light"><img src="logo/lockup-light.svg" alt=""><figcaption><a href="logo/lockup-light.svg">logo/lockup-light.svg</a></figcaption></figure></div></section>
-<section><h2>Couleurs</h2><ul><li><i style="background:var(--cc-bg)"></i><b>bg</b><code>#121212</code><span>Fond de toutes les pages (login, statut, applis). Gris très foncé plutôt que noir pur (valeur Material Design), moins dur pour l'œil.</span></li>
-<li><i style="background:var(--cc-surface)"></i><b>surface</b><code>#1a1a1a</code><span>Cartes, tuiles de service, colonne du formulaire de login.</span></li>
-<li><i style="background:var(--cc-surface-raised)"></i><b>surface-raised</b><code>#222222</code><span>Élément posé sur une surface : champ, puce, grande forme décorative du login.</span></li>
-<li><i style="background:var(--cc-line)"></i><b>line</b><code>#2e2e2e</code><span>Bordures de cartes et séparateurs (1 px).</span></li>
-<li><i style="background:var(--cc-line-strong)"></i><b>line-strong</b><code>#3d3d3d</code><span>Bordure d'un champ au repos.</span></li>
-<li><i style="background:var(--cc-text)"></i><b>text</b><code>#e8e3da</code><span>Texte principal sur bg et surface (environ 15:1).</span></li>
-<li><i style="background:var(--cc-text-soft)"></i><b>text-soft</b><code>#cfc9bf</code><span>Labels de champs, paragraphes secondaires sur bg et surface.</span></li>
-<li><i style="background:var(--cc-text-muted)"></i><b>text-muted</b><code>#8c857b</code><span>Méta, horodatages, mentions ; 4,8:1 sur surface, à garder pour le petit texte informatif.</span></li>
-<li><i style="background:var(--cc-amber)"></i><b>amber</b><code>#ecb166</code><span>Accent de marque, ambre doux : logo, mascottes, bouton principal, liens, focus. Désaturé exprès (78 %) pour ne pas vibrer sur le fond sombre. Jamais une couleur d'état.</span></li>
-<li><i style="background:var(--cc-amber-soft)"></i><b>amber-soft</b><code>#fac687</code><span>Survol des liens et des boutons amber.</span></li>
-<li><i style="background:var(--cc-on-amber)"></i><b>on-amber</b><code>#0a0a0a</code><span>Texte et yeux posés sur amber (10,4:1) : le blanc ne passe pas.</span></li>
-<li><i style="background:var(--cc-amber-deep)"></i><b>amber-deep</b><code>#9f6700</code><span>Logo, boutons et accents sur fond clair (4,8:1 sur blanc).</span></li>
-<li><i style="background:var(--cc-ok)"></i><b>ok</b><code>#4ade80</code><span>État opérationnel : texte du badge OK sur ok-bg.</span></li>
-<li><i style="background:var(--cc-ok-bg)"></i><b>ok-bg</b><code>#10291a</code><span>Fond du badge OK.</span></li>
-<li><i style="background:var(--cc-warn)"></i><b>warn</b><code>#e9ec94</code><span>Avertissement : état dégradé ou lent, élément à vérifier ; barres d'historique dégradées. Jaune citron pâle, nettement plus jaune que amber pour ne pas s'y confondre (12,7:1 sur warn-bg).</span></li>
-<li><i style="background:var(--cc-warn-bg)"></i><b>warn-bg</b><code>#25231a</code><span>Fond du badge dégradé.</span></li>
-<li><i style="background:var(--cc-down)"></i><b>down</b><code>#f87171</code><span>Panne : texte du badge sur down-badge-bg, bordure de la tuile en panne, barres d'historique en panne.</span></li>
-<li><i style="background:var(--cc-down-bg)"></i><b>down-bg</b><code>#1f0e0e</code><span>Fond de la tuile d'un service en panne.</span></li>
-<li><i style="background:var(--cc-down-badge-bg)"></i><b>down-badge-bg</b><code>#361516</code><span>Fond du badge En panne, texte down dessus (6:1) ; un cran au-dessus de down-bg pour rester visible sur la tuile en panne.</span></li>
-<li><i style="background:var(--cc-bar-idle)"></i><b>bar-idle</b><code>#343434</code><span>Barre d'historique d'un jour sans incident : neutre, pour que seuls les incidents ressortent.</span></li></ul></section>
+<section><h2>Couleurs</h2><p>Thèmes, dans l'ordre : Nuit, Jour. Le second s'active par <code>data-theme="light"</code>.</p><ul><li><i title="dark" style="background:#121212"></i><i title="light" style="background:#f3f0eb"></i><b>bg</b><code>#121212 · #f3f0eb</code><span>Fond de toutes les pages (login, statut, applis). Gris très foncé plutôt que noir pur (valeur Material Design), moins dur pour l'œil.</span></li>
+<li><i title="dark" style="background:#1a1a1a"></i><i title="light" style="background:#faf8f4"></i><b>surface</b><code>#1a1a1a · #faf8f4</code><span>Cartes, tuiles de service, colonne du formulaire de login.</span></li>
+<li><i title="dark" style="background:#222222"></i><i title="light" style="background:#ffffff"></i><b>surface-raised</b><code>#222222 · #ffffff</code><span>Élément posé sur une surface : champ, puce, grande forme décorative du login.</span></li>
+<li><i title="dark" style="background:#2e2e2e"></i><i title="light" style="background:#e3ded5"></i><b>line</b><code>#2e2e2e · #e3ded5</code><span>Bordures de cartes et séparateurs (1 px).</span></li>
+<li><i title="dark" style="background:#3d3d3d"></i><i title="light" style="background:#cbc4b8"></i><b>line-strong</b><code>#3d3d3d · #cbc4b8</code><span>Bordure d'un champ au repos.</span></li>
+<li><i title="dark" style="background:#e8e3da"></i><i title="light" style="background:#1f1c18"></i><b>text</b><code>#e8e3da · #1f1c18</code><span>Texte principal sur bg et surface (environ 15:1).</span></li>
+<li><i title="dark" style="background:#cfc9bf"></i><i title="light" style="background:#4d473f"></i><b>text-soft</b><code>#cfc9bf · #4d473f</code><span>Labels de champs, paragraphes secondaires sur bg et surface.</span></li>
+<li><i title="dark" style="background:#8c857b"></i><i title="light" style="background:#6e675c"></i><b>text-muted</b><code>#8c857b · #6e675c</code><span>Méta, horodatages, mentions ; 4,8:1 sur surface, à garder pour le petit texte informatif.</span></li>
+<li><i title="dark" style="background:#ecb166"></i><i title="light" style="background:#905d00"></i><b>amber</b><code>#ecb166 · #905d00</code><span>Accent de marque, ambre doux : logo, mascottes, bouton principal, liens, focus. Désaturé exprès (78 %) pour ne pas vibrer sur le fond sombre. Jamais une couleur d'état.</span></li>
+<li><i title="dark" style="background:#fac687"></i><i title="light" style="background:#7a4e00"></i><b>amber-soft</b><code>#fac687 · #7a4e00</code><span>Survol des liens et des boutons amber.</span></li>
+<li><i title="dark" style="background:#0a0a0a"></i><i title="light" style="background:#ffffff"></i><b>on-amber</b><code>#0a0a0a · #ffffff</code><span>Texte posé sur amber : presque noir en Nuit (10,4:1, le blanc ne passe pas), blanc en Jour (5,6:1). Les yeux des mascottes restent presque noirs dans les deux thèmes.</span></li>
+<li><i title="dark" style="background:#905d00"></i><i title="light" style="background:#905d00"></i><b>amber-deep</b><code>#905d00 · #905d00</code><span>Logo sur fond clair, hors thème : même valeur que amber en Jour (4,9:1 sur le fond crème, 5,6:1 sur blanc).</span></li>
+<li><i title="dark" style="background:#4ade80"></i><i title="light" style="background:#17743a"></i><b>ok</b><code>#4ade80 · #17743a</code><span>État opérationnel : texte du badge OK sur ok-bg.</span></li>
+<li><i title="dark" style="background:#10291a"></i><i title="light" style="background:#e2f2e4"></i><b>ok-bg</b><code>#10291a · #e2f2e4</code><span>Fond du badge OK.</span></li>
+<li><i title="dark" style="background:#e9ec94"></i><i title="light" style="background:#6a6200"></i><b>warn</b><code>#e9ec94 · #6a6200</code><span>Avertissement : état dégradé ou lent, élément à vérifier ; barres d'historique dégradées. Jaune citron pâle, nettement plus jaune que amber pour ne pas s'y confondre (12,7:1 sur warn-bg).</span></li>
+<li><i title="dark" style="background:#25231a"></i><i title="light" style="background:#f1f0c4"></i><b>warn-bg</b><code>#25231a · #f1f0c4</code><span>Fond du badge dégradé.</span></li>
+<li><i title="dark" style="background:#f87171"></i><i title="light" style="background:#b3261e"></i><b>down</b><code>#f87171 · #b3261e</code><span>Panne : texte du badge sur down-badge-bg, bordure de la tuile en panne, barres d'historique en panne.</span></li>
+<li><i title="dark" style="background:#1f0e0e"></i><i title="light" style="background:#fbe6e3"></i><b>down-bg</b><code>#1f0e0e · #fbe6e3</code><span>Fond de la tuile d'un service en panne.</span></li>
+<li><i title="dark" style="background:#361516"></i><i title="light" style="background:#f7d4cf"></i><b>down-badge-bg</b><code>#361516 · #f7d4cf</code><span>Fond du badge En panne, texte down dessus (6:1) ; un cran au-dessus de down-bg pour rester visible sur la tuile en panne.</span></li>
+<li><i title="dark" style="background:#343434"></i><i title="light" style="background:#ddd8ce"></i><b>bar-idle</b><code>#343434 · #ddd8ce</code><span>Barre d'historique d'un jour sans incident : neutre, pour que seuls les incidents ressortent.</span></li></ul></section>
+<section><h2>Feuilles d'appli</h2><p><a href="apps/immich.css">apps/immich.css</a></p></section>
 </main></body></html>
