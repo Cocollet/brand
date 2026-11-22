@@ -1,0 +1,108 @@
+/* Thème Cocollet pour Immich (interface web). Gabarit : les jetons entre doubles accolades sont remplis par
+   build.mjs depuis tokens.json (voir son en-tête), publié sur https://cocollet.github.io/brand/apps/immich.css
+   Dans Immich : Administration, Settings, Theme Settings, Custom CSS = une seule ligne,
+     @import url("https://cocollet.github.io/brand/apps/immich.css");
+   Charte injoignable : l'import échoue et Immich garde son thème d'origine.
+   Tout passe par les variables d'Immich (web/src/app.css et le thème de @immich/ui), sauf le logo.
+   Vérifié sur Immich v3.4 : à revoir quand son interface change de version majeure. */
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Inter:wght@400;500;600&display=swap");
+
+/* 1. Commun aux deux modes : police, gris, anciennes variables en triplets RVB.
+      Une seule rampe de gris sert les deux modes : crème du thème Jour en haut, gris du thème Nuit en bas.
+      @immich/ui en tire ses échelles light-* et dark-*. */
+:root {
+  --font-sans: Inter, system-ui, sans-serif;
+
+  --cc-n-50: {{light:surface}};
+  --cc-n-100: color-mix(in oklab, {{light:bg}} 50%, {{light:line}});
+  --cc-n-200: {{light:line}};
+  --cc-n-300: {{light:line-strong}};
+  --cc-n-400: color-mix(in oklab, {{light:line-strong}} 50%, {{light:text-muted}});
+  --cc-n-500: {{light:text-muted}};
+  --cc-n-600: {{light:text-soft}};
+  --cc-n-700: {{dark:line-strong}};
+  --cc-n-800: color-mix(in oklab, {{dark:surface-raised}} 50%, {{dark:line}});
+  --cc-n-900: {{dark:surface}};
+  --cc-n-950: {{dark:bg}};
+
+  --color-neutral-50: var(--cc-n-50); --color-gray-50: var(--cc-n-50); --color-slate-50: var(--cc-n-50); --color-zinc-50: var(--cc-n-50);
+  --color-neutral-100: var(--cc-n-100); --color-gray-100: var(--cc-n-100); --color-slate-100: var(--cc-n-100); --color-zinc-100: var(--cc-n-100);
+  --color-neutral-200: var(--cc-n-200); --color-gray-200: var(--cc-n-200); --color-slate-200: var(--cc-n-200); --color-zinc-200: var(--cc-n-200);
+  --color-neutral-300: var(--cc-n-300); --color-gray-300: var(--cc-n-300); --color-slate-300: var(--cc-n-300); --color-zinc-300: var(--cc-n-300);
+  --color-neutral-400: var(--cc-n-400); --color-gray-400: var(--cc-n-400); --color-slate-400: var(--cc-n-400); --color-zinc-400: var(--cc-n-400);
+  --color-neutral-500: var(--cc-n-500); --color-gray-500: var(--cc-n-500); --color-slate-500: var(--cc-n-500); --color-zinc-500: var(--cc-n-500);
+  --color-neutral-600: var(--cc-n-600); --color-gray-600: var(--cc-n-600); --color-slate-600: var(--cc-n-600); --color-zinc-600: var(--cc-n-600);
+  --color-neutral-700: var(--cc-n-700); --color-gray-700: var(--cc-n-700); --color-slate-700: var(--cc-n-700); --color-zinc-700: var(--cc-n-700);
+  --color-neutral-800: var(--cc-n-800); --color-gray-800: var(--cc-n-800); --color-slate-800: var(--cc-n-800); --color-zinc-800: var(--cc-n-800);
+  --color-neutral-900: var(--cc-n-900); --color-gray-900: var(--cc-n-900); --color-slate-900: var(--cc-n-900); --color-zinc-900: var(--cc-n-900);
+  --color-neutral-950: var(--cc-n-950); --color-gray-950: var(--cc-n-950); --color-slate-950: var(--cc-n-950); --color-zinc-950: var(--cc-n-950);
+
+  --immich-primary: {{rgb:light:amber}};
+  --immich-bg: {{rgb:light:bg}};
+  --immich-fg: {{rgb:light:text}};
+  --immich-dark-primary: {{rgb:dark:amber}};
+  --immich-dark-bg: {{rgb:dark:bg}};
+  --immich-dark-fg: {{rgb:dark:text}};
+  --immich-dark-gray: {{rgb:dark:surface}};
+}
+
+/* 2. Mode clair : thème Jour. Échelle de la teinte : 50 le plus clair, 500 = amber, 950 le plus foncé. */
+:root, .light {
+  --immich-ui-primary-50: color-mix(in oklab, {{light:amber}} 7%, {{light:surface}});
+  --immich-ui-primary-100: color-mix(in oklab, {{light:amber}} 14%, {{light:surface}});
+  --immich-ui-primary-200: color-mix(in oklab, {{light:amber}} 28%, {{light:surface}});
+  --immich-ui-primary-300: color-mix(in oklab, {{light:amber}} 48%, {{light:surface}});
+  --immich-ui-primary-400: color-mix(in oklab, {{light:amber}} 74%, {{light:surface}});
+  --immich-ui-primary-500: {{light:amber}};
+  --immich-ui-primary-600: color-mix(in oklab, {{light:amber}} 86%, {{light:text}});
+  --immich-ui-primary-700: color-mix(in oklab, {{light:amber}} 72%, {{light:text}});
+  --immich-ui-primary-800: color-mix(in oklab, {{light:amber}} 56%, {{light:text}});
+  --immich-ui-primary-900: color-mix(in oklab, {{light:amber}} 42%, {{light:text}});
+  --immich-ui-primary-950: color-mix(in oklab, {{light:amber}} 30%, {{light:text}});
+  --immich-ui-light: {{light:bg}};
+  --immich-ui-dark: {{light:text}};
+  --immich-ui-muted: {{light:text-muted}};
+  --immich-ui-gray: {{light:surface}};
+  --immich-ui-default-border: {{light:line}};
+}
+
+/* 3. Mode sombre : thème Nuit. Échelle inversée : 50 le plus foncé, 500 = amber, 600 = survol, 950 le plus clair. */
+.dark {
+  --immich-ui-primary-50: color-mix(in oklab, {{dark:amber}} 10%, {{dark:bg}});
+  --immich-ui-primary-100: color-mix(in oklab, {{dark:amber}} 18%, {{dark:bg}});
+  --immich-ui-primary-200: color-mix(in oklab, {{dark:amber}} 32%, {{dark:bg}});
+  --immich-ui-primary-300: color-mix(in oklab, {{dark:amber}} 48%, {{dark:bg}});
+  --immich-ui-primary-400: color-mix(in oklab, {{dark:amber}} 66%, {{dark:bg}});
+  --immich-ui-primary-500: {{dark:amber}};
+  --immich-ui-primary-600: {{dark:amber-soft}};
+  --immich-ui-primary-700: color-mix(in oklab, {{dark:amber-soft}} 75%, white);
+  --immich-ui-primary-800: color-mix(in oklab, {{dark:amber-soft}} 50%, white);
+  --immich-ui-primary-900: color-mix(in oklab, {{dark:amber-soft}} 28%, white);
+  --immich-ui-primary-950: color-mix(in oklab, {{dark:amber-soft}} 12%, white);
+  --immich-ui-light: {{dark:bg}};
+  --immich-ui-dark: {{dark:text}};
+  --immich-ui-muted: {{dark:text-soft}};
+  --immich-ui-gray: {{dark:surface}};
+  --immich-ui-default-border: {{dark:line}};
+}
+
+/* 4. Fond de page avant le chargement de l'appli : ni éclair blanc, ni éclair noir. */
+html.light { background-color: {{light:bg}}; }
+html.dark { background-color: {{dark:bg}}; }
+
+/* 5. Titres en Lora. */
+h1, h2, h3 { font-family: Lora, Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
+
+/* 6. Logo Cocollet à la place de celui d'Immich. L'image d'origine est poussée hors de son cadre et le logo
+      posé en fond. Ne pas passer par content: url() : sans effet sur une image dans Firefox.
+      Immich n'affiche que deux formes : le logo avec le nom (fichier immich-logo-inline-*) et l'icône seule (data:). */
+img[alt="Immich logo"]:is([src*="immich-logo-inline"], [src^="data:"]) { object-fit: none; object-position: -200vw 0; background: no-repeat left center / contain content-box; }
+img[alt="Immich logo"][src*="immich-logo-inline-light"] { background-image: url("../logo/lockup-light.svg"); }
+img[alt="Immich logo"][src*="immich-logo-inline-dark"] { background-image: url("../logo/lockup-dark.svg"); }
+img[alt="Immich logo"][src^="data:"] { background-image: url("../logo/mark-on-light.svg"); background-position: center; padding: 0.45rem; }
+.dark img[alt="Immich logo"][src^="data:"] { background-image: url("../logo/mark.svg"); }
+
+/* Logo affiché pendant le chargement de l'appli. */
+#stencil { animation: 0s linear 0.3s forwards delayedVisibility; background: url("../logo/mark-on-light.svg") center / 72px no-repeat; height: 150px; }
+html.dark #stencil { background-image: url("../logo/mark.svg"); }
+#stencil svg { visibility: hidden; }

@@ -27,7 +27,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A tokens.css manifest.json index.html logo mascots
+          git add -A tokens.css manifest.json index.html logo mascots apps
           if git diff --cached --quiet; then echo "Rien à publier"; exit 0; fi
           git commit -qm "Régénérer la charte publiée (build.mjs)"
           git push -q origin HEAD:main
