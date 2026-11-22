@@ -22,7 +22,12 @@
   --cc-down-bg: #1f0e0e; /* Fond de la tuile d'un service en panne. */
   --cc-down-badge-bg: #361516; /* Fond du badge En panne, texte down dessus (6:1) ; un cran au-dessus de down-bg pour rester visible sur la tuile en panne. */
   --cc-bar-idle: #343434; /* Barre d'historique d'un jour sans incident : neutre, pour que seuls les incidents ressortent. */
+  --cc-mascot: #ecb166; /* Visage d'une mascotte : ambre doux dans les deux thèmes. Sert aux fichiers de mascots/ et aux mascottes dessinées dans une page (yeux animés de hello). */
+  --cc-mascot-eye: #0a0a0a; /* Yeux d'une mascotte : presque noirs dans les deux thèmes. */
+  --cc-tray: #383532; /* Plateau sous un document affiché (relecture de Caviardage) : gris chaud en Nuit, pour qu'une page claire n'éblouisse pas ; un cran sous le fond en Jour. */
+  --cc-page: #e6e1d8; /* Papier d'un document affiché : blanc atténué en Nuit, blanc en Jour. Le texte du document reste presque noir dans les deux thèmes. */
   --cc-focus-ring: 0 0 0 3px rgba(236,177,102,0.25); /* Halo du champ ou bouton qui a le focus, avec une bordure amber. */
+  --cc-shadow-raised: 0 8px 24px rgba(0,0,0,0.45); /* Élément qui flotte au-dessus de la page : bulle, panneau du bas. */
   --cc-space-1: 4px; /* Écart entre une puce et son texte. */
   --cc-space-2: 8px; /* Label → champ. */
   --cc-space-3: 12px; /* Logo → nom ; écart entre badges. */
@@ -77,5 +82,10 @@
   --cc-down-bg: #fbe6e3;
   --cc-down-badge-bg: #f7d4cf;
   --cc-bar-idle: #ddd8ce;
+  --cc-mascot: #ecb166;
+  --cc-mascot-eye: #0a0a0a;
+  --cc-tray: #e6e1d8;
+  --cc-page: #ffffff;
   --cc-focus-ring: 0 0 0 3px rgba(144,93,0,0.25);
+  --cc-shadow-raised: 0 8px 24px rgba(31,28,24,0.16);
 }
